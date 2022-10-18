@@ -38,7 +38,13 @@ Huawei
 3. เพิ่ม/ปรับ Classifier layer
 
 
-# Comparison 3 backbone:
+# Comparison performance:
+
+1.VGG16
+
+2.Mobilenet
+
+3.inception-V3
 
 
 
