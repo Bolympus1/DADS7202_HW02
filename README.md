@@ -17,6 +17,7 @@ Huawei
 
 
 # Dataset
+How to labeling data?
 
 
 # Assumption:
@@ -26,7 +27,7 @@ Huawei
 # Data Augmentation :
 
 
-
+How to split train/test set? manual or method?
 
 # Pre-train model:
 จุดที่ Fine Tuning ได้
