@@ -29,10 +29,16 @@ Huawei
 
 
 # Pre-train model:
+จุดที่ Fine Tuning ได้
+
+1. รูปแบบ Data Aug layer
+2. Feature extraction
+2.1 แก้ freeze ของ pre-train
+2.2 เพิ่ม Convolution / pooling ต่อจาก pre-train
+3. เพิ่ม/ปรับ Classifier layer
 
 
-
-# Selected 3 backbone:
+# Comparison 3 backbone:
 
 
 
@@ -46,6 +52,8 @@ Huawei
 
 
 # Discussion:
+1.session crash due to ran out of RAM
+![MicrosoftTeams-image (10)](https://user-images.githubusercontent.com/107410157/196458197-d0e59956-51d9-4be5-8566-edc6683d903c.png)
 
 
 
