@@ -23,7 +23,8 @@ How to labeling data?
 
 # Assumption:
 
-
+# Data pre-processing and splitting :
+In the process, all images were converted to .jpg files and manually extracted into sub-folders separate by brand. Then, we resized the images by running tf.keras.preprocessing.image.load_img() function for loading the images with different heights and widths into PIL format, sizing 224 x 224 pixels as CNN models expect such a target size. A PIL Image instance was then converted to a Numpy array using tf.keras.preprocessing.image.img_to_array() function, returning a 3D Numpy array (501, 224, 224, 3). Last step, we also needed to run the images through a preprocess input function of the models we have used, such as tf.keras.applications.efficientnet.preprocess_input() for preprocessing the NumPy array encoding a batch of images.
 
 # Data Augmentation :
 
