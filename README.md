@@ -17,6 +17,7 @@ Huawei
 
 
 # Dataset
+Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing
 How to labeling data?
 
 
