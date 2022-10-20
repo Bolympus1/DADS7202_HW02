@@ -16,7 +16,7 @@ There are a lot of mobile phones in the market but **the appearance of every mob
 * 📱 **`Huawei`**
 
 
-## 📋 Dataset
+## 📋 Image Dataset
  - [✨ Dataset](https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing) <br>
 Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing
 How to labeling data?
