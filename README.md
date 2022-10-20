@@ -1,7 +1,7 @@
 # DADS7202_HW02 The pre-trained CNN
 
 ## Project title:
-
+Classification of Mobile phone brand
 
 
 ## Introduction: 
@@ -10,10 +10,10 @@ Nowadays there are a lot of mobile phones in the market there has a lot of uniqu
 
 There are a lot of mobile phones in the market but **the appearance of every mobile phone are look the same** make it's hard for the customer to find a phone that they want.  even the photo of the phone on Google sometime the picture that comes up looks like the brand that search but it isn't. **Because of this problem our team come with the idea** **`"Classification of mobile phone brand"`** to classified the picture of mobile phone which one is which brand
 
-* 📱 **`Apple (iPhone)`**                      
-* 📱 **`Samsung`**
-* 📱 **`OPPO`**                              
+* 📱 **`Apple (iPhone)`**    
 * 📱 **`Huawei`**
+* 📱 **`OPPO`**   
+* 📱 **`Samsung`**
 
 
 ## 📋 Image Dataset
@@ -23,6 +23,7 @@ How to labeling data?
 
 
 ## Assumption:
+ในการจำแนกยี่ห้อของโทรศัพท์มือถือ ซึ่งเป็นรุ่นที่วางจำหน่ายอยู่ในปัจจุบัน (ปี 2022) เราคาดว่า 
 
 ## Data pre-processing and splitting :
 In the process, all images were converted to .jpg files and manually extracted into sub-folders separate by brand. Then, we resized the images by running tf.keras.preprocessing.image.load_img() function for loading the images with different heights and widths into PIL format, sizing 224 x 224 pixels as CNN models expect such a target size. A PIL Image instance was then converted to a Numpy array using tf.keras.preprocessing.image.img_to_array() function, returning a 3D Numpy array (501, 224, 224, 3). Last step, we also needed to run the images through a preprocess input function of the models we have used, such as tf.keras.applications.efficientnet.preprocess_input() for preprocessing the NumPy array encoding a batch of images.
@@ -59,12 +60,15 @@ How to split train/test set? manual or method?
 
 ## Results:
 
+no-tune reult model ทายว่าเป็นอะไรบ้าง
+
 
 
 ## Discussion:
-1.session crash due to ran out of RAM
+1.session crash due to ran out of RAM (ต้องใช้ resource มาก)
 ![MicrosoftTeams-image (10)](https://user-images.githubusercontent.com/107410157/196458197-d0e59956-51d9-4be5-8566-edc6683d903c.png)
 
+2.การเพิ่มจำนวนรูปภาพในการ Train ไม่ได้ทำให้ประสิทธิผลของ Model เพิ่มขึ้นอย่างมีนัยสำคัญ,  การ split มีผล ความหลากหลายของรูปภาพใน train/test set
 
 
 ## Conclusion:
