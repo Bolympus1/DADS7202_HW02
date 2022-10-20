@@ -1,10 +1,10 @@
 # DADS7202_HW02 The pre-trained CNN
 
-# Project title:
+## Project title:
 
 
 
-# Introduction: 
+## Introduction: 
 There are a lot of mobile phones in the market but **the appearance of every mobile phone are look the same** make it's hard for the customer to find a phone that they want.  even the photo of the phone on Google sometime the picture that comes up looks like the brand that search but it isn't.
 
 **Because of this problem our team come with the idea** **`"Classification of mobile phone brand"`** to classified the picture of mobile phone which one is which brand
@@ -15,22 +15,22 @@ There are a lot of mobile phones in the market but **the appearance of every mob
 * 📱 **`Huawei`**
 
 
-# Dataset
+## Dataset
 Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing
 How to labeling data?
 
 
-# Assumption:
+## Assumption:
 
-# Data pre-processing and splitting :
+## Data pre-processing and splitting :
 In the process, all images were converted to .jpg files and manually extracted into sub-folders separate by brand. Then, we resized the images by running tf.keras.preprocessing.image.load_img() function for loading the images with different heights and widths into PIL format, sizing 224 x 224 pixels as CNN models expect such a target size. A PIL Image instance was then converted to a Numpy array using tf.keras.preprocessing.image.img_to_array() function, returning a 3D Numpy array (501, 224, 224, 3). Last step, we also needed to run the images through a preprocess input function of the models we have used, such as tf.keras.applications.efficientnet.preprocess_input() for preprocessing the NumPy array encoding a batch of images.
 
-# Data Augmentation :
+## Data Augmentation :
 
 
 How to split train/test set? manual or method?
 
-# Pre-train model:
+## Pre-train model:
 จุดที่ Fine Tuning ได้
 
 1. รูปแบบ Data Aug layer
@@ -40,7 +40,7 @@ How to split train/test set? manual or method?
 3. เพิ่ม/ปรับ Classifier layer
 
 
-# Comparison performance:
+## Comparison performance:
 
 1.VGG16
 
@@ -50,30 +50,30 @@ How to split train/test set? manual or method?
 
 
 
-# Training:
+## Training:
 
 
 
 
-# Results:
+## Results:
 
 
 
-# Discussion:
+## Discussion:
 1.session crash due to ran out of RAM
 ![MicrosoftTeams-image (10)](https://user-images.githubusercontent.com/107410157/196458197-d0e59956-51d9-4be5-8566-edc6683d903c.png)
 
 
 
-# Conclusion:
+## Conclusion:
 
 
 
-# References:
+## References:
 
 
 
-# 🙋 Deepsleep's Member:
+## 🙋 Deepsleep's Member:
 | %|ID|Name |Responsibility  |
 | :------ | ------ |:------|:-------|
 |⭐ **`20%`** | **`6410414007`**  | 👦 Athit Santikarn  |**`Collect data(Oppo)`**, **`Write result`**, **`conclusion report`**|
@@ -83,7 +83,7 @@ How to split train/test set? manual or method?
 |⭐ **`20%`** | **`6420422006`**  | 👦 Watcharakorn Pasanta  | **`Collect data(Huawei)`**, **`Train model-MobileNet`**|
 
 
-# End credit: 
+## End credit: 
 This project is a part of Course DADS7202 Deep Learning, Data Analytics and Data Science, NIDA.
 
 
