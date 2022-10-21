@@ -1,7 +1,7 @@
 # DADS7202_HW02 The pre-trained CNN
 
-## Project title:
-Classification of Mobile phone brand
+## Classification of Mobile phone brand
+
 
 
 ## Introduction: 
@@ -19,7 +19,7 @@ There are a lot of mobile phones in the market but **the appearance of every mob
 ## 📋 Image Dataset
  - [✨ Dataset](https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing) <br>
 Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing
-How to labeling data?
+เราได้ทำการเก็บรูปโทรศัพท์มือถือทั้ง 4 ยี่ห้อ ได้แก่ Apple(iPhone), Huawei, OPPO และ Sumsung ที่มีวางจำหน่ายในปัจจุบัน (ปี 2022) โดยเลือกเก็บรูปถ่ายในหลากหลายมุมมอง ทั้งด้านหน้า ด้านหลัง ด้านข้าง รูปเฉาพส่วน เช่น ส่วนกล้องถ่ายรูป โดยแหล่งที่เก็บเราได้เก็บมาจาก official page https://www.bnn.in.th/th และ unofficial page (Facebook market place) เพื่อให้ข้อมูล คุณภาพของภาพมีความหลากหลาย รวมทั้งหมด 434 ภาพ โดยแบ่งเป็น iphone 100 ภาพ, Huawei 125 ภาพ, OPPO 109 ภาพ และ Sumsung 100 ภาพ.
 
 
 ## Assumption:
