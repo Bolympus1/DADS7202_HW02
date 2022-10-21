@@ -27,7 +27,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ## Data pre-processing and splitting :
 ในการเตรียมข้อมูลรูปภาพ เราจัดเก็บรูปภาพทั้งหมด เป็น file .jpg จากนั้นใช้วิธีการ manual จัดเก็บแบ่งตาม folder ชื่อยี่ห้อ และ แยกเป็น 2 ส่วน คือ train_ds และ test_ds โดยแบ่งสัดส่วนของ train,validationและ test ตามรายละเอียดในตาราง
-จากนั้น ทำการ label class ของยี่ห้อ เรียงตามลำดับตัวอักษร โดย'apple' คือ class 0 และ 'samsung' คือ class 3 ตามลำดับ
+จากนั้น ทำการ label class ของยี่ห้อ เรียงตามลำดับตัวอักษร โดย 'apple' คือ class 0 และ 'samsung' คือ class 3 ตามลำดับ
 
 ## Pre-train model:
 
