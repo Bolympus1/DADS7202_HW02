@@ -65,13 +65,14 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 
 ## After Fine-tuning:
-จุดที่ Fine Tuning ได้
 
-1. รูปแบบ Data Aug layer
-2. Feature extraction
-2.1 แก้ freeze ของ pre-train
-2.2 เพิ่ม Convolution / pooling ต่อจาก pre-train
-3. เพิ่ม/ปรับ Classifier layer
+เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดี ดังนี้
+| Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
+| :------ | :----: |:-----:|:-----:|:-----:|:-----:|
+|**`"VGG16"`**|15|Conv2D : 3 Layer|activation="relu" & "tanh"|Adam|0.0001|
+|**`"MobileNet"`**|100|'all trainable|activation="relu" & Dropout =0.5|Adam|0.0001|
+|**`"ResNet152V2"`**|30|'all trainable|activation="relu" & Dropout =0.2|Adam|0.0001|
+
 
 ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning มีผลออกมาดังนี้
 
@@ -79,7 +80,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ## Results:
 
 
-2. After Fine-tuning : พบว่าที่ 3 โมงเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละโมลดังนี้
+2. After Fine-tuning : พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละโมลดังนี้
 
 | Model | AVG. Test Accuracy | SD Test Accuracy | AVG. Test Loss | SD Test Loss | AVG. Runtime with GPU (H:M:S) |
 | :------ | :----: |:-----:|:-----:|:-----:|:-----:|
@@ -131,7 +132,11 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ## End credit: 
 This project is a part of Course DADS7202 Deep Learning, Data Analytics and Data Science, NIDA.
 
-
+1. รูปแบบ Data Aug layer
+2. Feature extraction
+2.1 แก้ freeze ของ pre-train
+2.2 เพิ่ม Convolution / pooling ต่อจาก pre-train
+3. เพิ่ม/ปรับ Classifier layer
 Note : การเขียนรายงาน HW02
 
 -ให้เครดิตที่มาของภาพ dataset
