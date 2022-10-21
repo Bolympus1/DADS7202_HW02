@@ -37,7 +37,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ## Data Augmentation :
 
 | Model         | Image data augmentation                     |
-| ------------- |:-------------------------------------------:|
+| ------------- |---------------------------------------------|
 | VGG16         |tf.keras.layers.RandomFlip                   |
 |               |tf.keras.layers.RandomTranslation            |
 | MobileNet     |tf.keras.layers.RandomFlip                   |
