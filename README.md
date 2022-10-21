@@ -66,7 +66,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ## After Fine-tuning:
 
-เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดี ดังนี้
+เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดีด้วยการปรับพารามิเตอร์ ดังนี้
 
 **Table 2: Result before fine-tuning**
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
