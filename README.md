@@ -58,7 +58,7 @@ How to split train/test set? manual or method?
 
 
 
-## Training:
+
 
 
 
