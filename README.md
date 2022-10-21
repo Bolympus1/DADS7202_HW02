@@ -32,7 +32,23 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ## ฺBefore Fine-tuning:
 ในการศึกษาครั้งนี้ ผลของ pre-train model ก่อน fine-tuning พบว่า ทั้ง 3 model (**`"VGG16"`**, **`"ResNet152V2"`** , **`"MobileNet"`**) ให้ค่า Accuracy = 0 นั่นหมายความว่า pre-train model ทั้ง 3 ไม่สามารถจำแนกยี่ห้อของโทรศัพท์ตามที่เราต้องการศึกษาได้ โดยผลของการ prediction มีการทำนาย iPhone ว่าเป็น projector, ทำนาย Huawei ว่าเป็น ipod, ทำนาย Oppo ว่าเป็น switch, ทำนาย Samsung ว่าเป็น notebook เป็นต้น
+ตารางที่ 1: Result before fine-tuning
 
+| Model |Test Accuracy | Test Loss | Runtime with GPU (H:M:S) | GPU Name |
+| :------ | :----: |:-----:|:-----:|:-----:|
+|**`"VGG16"`**| 0 | 18.2531 | 0:02:41 | Tesla T4
+|**`"MobileNet"`**| 0 | 13.3670 | 0:02:41 | Tesla T4
+|**`"ResNet152V2"`**| 0 | 2508.23 | 0:03:10 | Tesla T4
+
+ผลการทายของแต่ละโมเดล 
+ - **`"VGG16"`**
+ ![20](https://user-images.githubusercontent.com/86920208/197238051-bbb90b44-04b4-4fea-9ae5-ec7eb774d42a.png)
+
+ - **`"MobileNet"`**
+ ![21](https://user-images.githubusercontent.com/86920208/197238125-6df38106-96fa-4f31-9305-5786b6839f7a.png)
+
+ - **`"ResNet152V2"`**
+ ![22](https://user-images.githubusercontent.com/86920208/197238170-56d4026b-225f-4842-b664-5a4486e8b253.png)
 
 ## Data Augmentation :
 
@@ -69,23 +85,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ![25](https://user-images.githubusercontent.com/86920208/197236588-2943a18f-33b1-4b5f-8e40-4f0a249d6ada.png)
 
 ## Results:
-1. Before Fine-tuning : พบว่าทั้ง 3 โมเดลไม่มีโมเดลใดเลยที่ทายถูกว่าเป็นรูปภาพของโทรศัพท์และพบว่าทั้ง 3 โมเดลมีค่าดังต่อไปนี้
 
-| Model |Test Accuracy | Test Loss | Runtime with GPU (H:M:S) | GPU Name |
-| :------ | :----: |:-----:|:-----:|:-----:|
-|**`"VGG16"`**| 0 | 18.2531 | 0:02:41 | Tesla T4
-|**`"MobileNet"`**| 0 | 13.3670 | 0:02:41 | Tesla T4
-|**`"ResNet152V2"`**| 0 | 2508.23 | 0:03:10 | Tesla T4
-
-ผลการทายของแต่ละโมเดล 
- - **`"VGG16"`**
- ![20](https://user-images.githubusercontent.com/86920208/197238051-bbb90b44-04b4-4fea-9ae5-ec7eb774d42a.png)
-
- - **`"MobileNet"`**
- ![21](https://user-images.githubusercontent.com/86920208/197238125-6df38106-96fa-4f31-9305-5786b6839f7a.png)
-
- - **`"ResNet152V2"`**
- ![22](https://user-images.githubusercontent.com/86920208/197238170-56d4026b-225f-4842-b664-5a4486e8b253.png)
 
 2. After Fine-tuning : พบว่าที่ 3 โมงเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละโมลดังนี้
 
