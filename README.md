@@ -29,7 +29,9 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 * ในการเตรียมข้อมูลรูปภาพ เราจัดเก็บรูปภาพทั้งหมด เป็น file .jpg จากนั้นใช้วิธีการ manual จัดเก็บแบ่งตาม folder ชื่อยี่ห้อ และ แยกเป็น 2 ส่วน คือ train_ds และ test_ds โดยแบ่งสัดส่วนของ train, validation และ test ตามรายละเอียดในตาราง
 * ทำการ label class ของยี่ห้อ เรียงตามลำดับตัวอักษร โดย 'apple' คือ class 0 และ 'samsung' คือ class 3 ตามลำดับ
 * ทำการ reshape โดย กำหนด input_shape = (224, 224, 3) 
-###Table 1: Data pre-processing and splitting
+
+Table 1: Data pre-processing and splitting
+------------------------------------------
 
 ## ฺBefore Fine-tuning:
 ในการศึกษาครั้งนี้ ผลของ pre-train model ก่อน fine-tuning พบว่า ทั้ง 3 model (**`"VGG16"`**, **`"ResNet152V2"`** , **`"MobileNet"`**) ให้ค่า Accuracy = 0 นั่นหมายความว่า pre-train model ทั้ง 3 ไม่สามารถจำแนกยี่ห้อของโทรศัพท์ตามที่เราต้องการศึกษาได้ โดยผลของการ prediction มีการทำนาย iPhone ว่าเป็น projector, ทำนาย Huawei ว่าเป็น ipod, ทำนาย Oppo ว่าเป็น switch, ทำนาย Samsung ว่าเป็น notebook เป็นต้น
