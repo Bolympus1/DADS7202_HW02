@@ -84,12 +84,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |**`"MobileNet"`**|0.870|±0.0313|0.631|±0.1281|0:07:14|
 |**`"ResNet152V2"`**|0.795|±0.0447|0.873|±0.1333|0:02:46|
 
-
-## Results:
-
-
-
-ผลของการทางของแต่ละโมลเดล โดยชื่อของ class คือ Correct brand - Predict Brand
+ผลของการทายของแต่ละโมลเดล โดยชื่อของ class คือ Actual brand - Predict Brand
  - **`"VGG16"`**
  
  ![image](https://user-images.githubusercontent.com/86920208/197242106-bb7c47f0-7009-4ee4-82c2-57f7f319bed3.png)
@@ -102,7 +97,15 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
  
 ![image](https://user-images.githubusercontent.com/86920208/197242572-f5c2f464-fd14-4cd0-92f8-9e95d1ce9f93.png)
 
+
+
+
+## Results:
+
+
 ![30](https://user-images.githubusercontent.com/86920208/197248454-7298a1a3-ea89-4a58-9083-41f02d71bc38.png)
+
+
 
 
 ## Discussion:
