@@ -58,22 +58,55 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 2.2 เพิ่ม Convolution / pooling ต่อจาก pre-train
 3. เพิ่ม/ปรับ Classifier layer
 
+ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning มีผลออกมาดังนี้
+1. **`"VGG16"`**
+![23](https://user-images.githubusercontent.com/86920208/197236425-a494acd1-8686-4c3f-9c90-0fd44b7edd21.png)
 
-## Comparison performance:
+2. **`"MobileNet"`**
+![24](https://user-images.githubusercontent.com/86920208/197236525-1a437eb9-cfac-4e81-a1ed-658b435f0aa1.png)
 
-
-
-
-
-
-
-
-
+3. **`"ResNet152V2"`**
+![25](https://user-images.githubusercontent.com/86920208/197236588-2943a18f-33b1-4b5f-8e40-4f0a249d6ada.png)
 
 ## Results:
+1. Before Fine-tuning : พบว่าทั้ง 3 โมเดลไม่มีโมเดลใดเลยที่ทายถูกว่าเป็นรูปภาพของโทรศัพท์และพบว่าทั้ง 3 โมเดลมีค่าดังต่อไปนี้
 
-no-tune reult model ทายว่าเป็นอะไรบ้าง
+| Model |Test Accuracy | Test Loss | Runtime with GPU (H:M:S) | GPU Name |
+| :------ | :----: |:-----:|:-----:|:-----:|
+|**`"VGG16"`**| 0 | 18.2531 | 0:02:41 | Tesla T4
+|**`"MobileNet"`**| 0 | 13.3670 | 0:02:41 | Tesla T4
+|**`"ResNet152V2"`**| 0 | 2508.23 | 0:03:10 | Tesla T4
 
+ผลการทายของแต่ละโมเดล 
+ - **`"VGG16"`**
+ ![20](https://user-images.githubusercontent.com/86920208/197238051-bbb90b44-04b4-4fea-9ae5-ec7eb774d42a.png)
+
+ - **`"MobileNet"`**
+ ![21](https://user-images.githubusercontent.com/86920208/197238125-6df38106-96fa-4f31-9305-5786b6839f7a.png)
+
+ - **`"ResNet152V2"`**
+ ![22](https://user-images.githubusercontent.com/86920208/197238170-56d4026b-225f-4842-b664-5a4486e8b253.png)
+
+2. After Fine-tuning : พบว่าที่ 3 โมงเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละโมลดังนี้
+
+| Model | AVG. Test Accuracy | SD Test Accuracy | AVG. Test Loss | SD Test Loss | AVG. Runtime with GPU (H:M:S) |
+| :------ | :----: |:-----:|:-----:|:-----:|:-----:|
+|**`"VGG16"`**|0.730|±0.0167|0.715|±0.0749|0:02:50|
+|**`"MobileNet"`**|0.870|±0.0313|0.631|±0.1281|0:07:14|
+|**`"ResNet152V2"`**|0.795|±0.0447|0.873|±0.1333|0:02:46|
+
+ผลของการทางของแต่ละโมลเดล โดยชื่อของ class คือ Correct brand - Predict Brand
+ - **`"VGG16"`**
+ 
+ ![image](https://user-images.githubusercontent.com/86920208/197242106-bb7c47f0-7009-4ee4-82c2-57f7f319bed3.png)
+ 
+ - **`"MobileNet"`**
+ 
+ ![image](https://user-images.githubusercontent.com/86920208/197242438-267ffb37-8307-46c2-bd21-ed170df14ac1.png)
+
+ - **`"ResNet152V2"`**
+ 
+![image](https://user-images.githubusercontent.com/86920208/197242572-f5c2f464-fd14-4cd0-92f8-9e95d1ce9f93.png)
 
 
 ## Discussion:
