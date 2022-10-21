@@ -1,6 +1,6 @@
 # DADS7202_HW02 The pre-trained CNN
 
-## Classification of Mobile phone brand
+# Classification of Mobile phone brand
 
 
 
