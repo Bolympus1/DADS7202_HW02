@@ -60,7 +60,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning มีผลออกมาดังนี้
 1. **`"VGG16"`**
-![23](https://user-images.githubusercontent.com/86920208/197236425-a494acd1-8686-4c3f-9c90-0fd44b7edd21.png)
+![23](https://user-images.githubusercontent.com/86920208/197248327-10aeba9e-10f5-4cf9-bc51-44a0205e5ee1.png)
 
 2. **`"MobileNet"`**
 ![24](https://user-images.githubusercontent.com/86920208/197236525-1a437eb9-cfac-4e81-a1ed-658b435f0aa1.png)
