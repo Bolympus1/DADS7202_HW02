@@ -108,6 +108,8 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
  
 ![image](https://user-images.githubusercontent.com/86920208/197242572-f5c2f464-fd14-4cd0-92f8-9e95d1ce9f93.png)
 
+![30](https://user-images.githubusercontent.com/86920208/197248454-7298a1a3-ea89-4a58-9083-41f02d71bc38.png)
+
 
 ## Discussion:
 1.session crash due to ran out of RAM (ต้องใช้ resource มาก)
