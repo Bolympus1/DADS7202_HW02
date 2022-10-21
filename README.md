@@ -37,8 +37,8 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ## ฺBefore Fine-tuning:
 ในการศึกษาครั้งนี้ ผลของ pre-train model ก่อน fine-tuning พบว่า ทั้ง 3 model (**`"VGG16"`**, **`"ResNet152V2"`** , **`"MobileNet"`**) ให้ค่า Accuracy = 0 นั่นหมายความว่า pre-train model ทั้ง 3 ไม่สามารถจำแนกยี่ห้อของโทรศัพท์ตามที่เราต้องการศึกษาได้ โดยผลของการ prediction มีการทำนาย iPhone ว่าเป็น projector, ทำนาย Huawei ว่าเป็น ipod, ทำนาย Oppo ว่าเป็น switch, ทำนาย Samsung ว่าเป็น notebook เป็นต้น
-###Table 2: Result before fine-tuning
 
+**Table 2: Result before fine-tuning**
 | Model |Test Accuracy | Test Loss | Runtime with GPU (H:M:S) | GPU Name |
 | :------ | :----: |:-----:|:-----:|:-----:|
 |**`"VGG16"`**| 0 | 18.2531 | 0:02:41 | Tesla T4
@@ -67,26 +67,27 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ## After Fine-tuning:
 
 เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดี ดังนี้
+
+**Table 2: Result before fine-tuning**
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
 | :------ | :----: |:-----:|:-----:|:-----:|:-----:|
 |**`"VGG16"`**|15|Conv2D : 3 Layer|activation="relu" & "tanh"|Adam|0.0001|
 |**`"MobileNet"`**|100|'all trainable|activation="relu" & Dropout =0.5|Adam|0.0001|
 |**`"ResNet152V2"`**|30|'all trainable|activation="relu" & Dropout =0.2|Adam|0.0001|
 
+ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละโมลดังนี้
 
-ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning มีผลออกมาดังนี้
-
-
-## Results:
-
-
-2. After Fine-tuning : พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละโมลดังนี้
-
+**Table 3: Result after fine-tuning**
 | Model | AVG. Test Accuracy | SD Test Accuracy | AVG. Test Loss | SD Test Loss | AVG. Runtime with GPU (H:M:S) |
 | :------ | :----: |:-----:|:-----:|:-----:|:-----:|
 |**`"VGG16"`**|0.730|±0.0167|0.715|±0.0749|0:02:50|
 |**`"MobileNet"`**|0.870|±0.0313|0.631|±0.1281|0:07:14|
 |**`"ResNet152V2"`**|0.795|±0.0447|0.873|±0.1333|0:02:46|
+
+
+## Results:
+
+
 
 ผลของการทางของแต่ละโมลเดล โดยชื่อของ class คือ Correct brand - Predict Brand
  - **`"VGG16"`**
