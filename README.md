@@ -23,20 +23,21 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 
 ## Assumption:
-ในการศึกษาครั้งนี้ เราคาดว่าโทรศัพท์มือถือรูปแบบในปัจจุบัน pre-trained model ที่ validation  บน ImageNet dataset น่าจะยังไม่รู้จักในระดับที่สามารถแยกยี่ห้อได้ เราจึงเลือก model มา 3 model โดยพิจารณาจาก size และ parameter แบ่งเป็น ขนาด ใหญ่ กลาง และ เล็ก โดย model ที่เลือกได้แก่ **`"VGG16"`**, **`"ResNet152V2"`** และ **`"MobileNet"`** ตามลำดับ โดยเราคาดว่า โมเดลที่มีขนาดใหญ่ที่สุด คือ VGG16 จะให้ผล accuracy ที่ดีที่สุด
+ในการศึกษาครั้งนี้ เราคาดว่าโทรศัพท์มือถือรูปแบบในปัจจุบัน pre-trained model ที่ validation บน ImageNet dataset น่าจะยังไม่รู้จักในระดับที่สามารถแยกยี่ห้อได้ เราจึงเลือก model มา 3 model โดยพิจารณาจาก size และ parameter แบ่งเป็น ขนาด ใหญ่ กลาง และ เล็ก โดย model ที่เลือกได้แก่ **`"VGG16"`**, **`"ResNet152V2"`** และ **`"MobileNet"`** ตามลำดับ โดยเราคาดว่า โมเดลที่มีขนาดใหญ่ที่สุด คือ VGG16 จะให้ผล accuracy ที่ดีที่สุด
 
 ## Data pre-processing and splitting :
 * ในการเตรียมข้อมูลรูปภาพ เราจัดเก็บรูปภาพทั้งหมด เป็น file .jpg จากนั้นใช้วิธีการ manual จัดเก็บแบ่งตาม folder ชื่อยี่ห้อ และ แยกเป็น 2 ส่วน คือ train_ds และ test_ds โดยแบ่งสัดส่วนของ train, validation และ test ตามรายละเอียดในตาราง
 * ทำการ label class ของยี่ห้อ เรียงตามลำดับตัวอักษร โดย 'apple' คือ class 0 และ 'samsung' คือ class 3 ตามลำดับ
-* ทำการ reshape โดย กำหนด input_shape = (224, 224,3) 
+* ทำการ reshape โดย กำหนด input_shape = (224, 224, 3) 
 
 ## Pre-train model:
+ในการศึกษาครั้งนี้ ผลของ pre-train model ก่อน fine-tuning พบว่า ทั้ง 3 model (**`"VGG16"`**, **`"ResNet152V2"`** , **`"MobileNet"`**) ให้ค่า Accuracy = 0 นั่นหมายความว่า pre-train model ทั้ง 3 ไม่สามารถจำแนกยี่ห้อของโทรศัพท์ตามที่เราต้องการศึกษาได้ โดยผลของการ prediction มีการทำนาย iPhone ว่าเป็น projector, ทำนาย Huawei ว่าเป็น ipod, ทำนาย Oppo ว่าเป็น switch, ทำนาย Samsung ว่าเป็น notebook เป็นต้น
 
 
 ## Data Augmentation :
 
 
-How to split train/test set? manual or method?
+
 
 ## Fine-tuning:
 จุดที่ Fine Tuning ได้
@@ -50,11 +51,7 @@ How to split train/test set? manual or method?
 
 ## Comparison performance:
 
-1.VGG16
 
-2.Mobilenet
-
-3.inception-V3
 
 
 
