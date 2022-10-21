@@ -23,9 +23,13 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ในการศึกษาครั้งนี้ เราคาดว่าโทรศัพท์มือถือรูปแบบในปัจจุบัน pre-trained model ที่ validation บน ImageNet dataset น่าจะยังไม่รู้จักในระดับที่สามารถแยกยี่ห้อได้ เราจึงเลือก model มา 3 model โดยพิจารณาจาก size และ parameter แบ่งเป็น ขนาด ใหญ่ กลาง และ เล็ก โดย model ที่เลือกได้แก่ **`"VGG16"`**, **`"ResNet152V2"`** และ **`"MobileNet"`** ตามลำดับ โดยเราคาดว่า โมเดลที่มีขนาดใหญ่ที่สุด คือ VGG16 จะให้ผล accuracy ที่ดีที่สุด
 
 ## Data pre-processing and splitting :
-* ในการเตรียมข้อมูลรูปภาพ เราจัดเก็บรูปภาพทั้งหมด เป็น file .jpg จากนั้นใช้วิธีการ manual จัดเก็บแบ่งตาม folder ชื่อยี่ห้อ และ แยกเป็น 2 ส่วน คือ train_ds และ test_ds โดยแบ่งสัดส่วนของ train, validation และ test ตามรายละเอียดในตาราง
+ * ในการเตรียมข้อมูลรูปภาพ เราจัดเก็บรูปภาพทั้งหมด เป็น file .jpg จากนั้นใช้วิธีการ manual จัดเก็บแบ่งตาม folder ชื่อยี่ห้อ และ แยกเป็น 2 ส่วน คือ train_ds และ test_ds โดยแบ่งสัดส่วนของ train, validation และ test ตามรายละเอียดในตารางที่ 1
 * ทำการ label class ของยี่ห้อ เรียงตามลำดับตัวอักษร โดย 'apple' คือ class 0 และ 'samsung' คือ class 3 ตามลำดับ
 * ทำการ reshape โดย กำหนด input_shape = (224, 224, 3)
+![image](https://user-images.githubusercontent.com/107410157/197269979-2a990713-da38-43eb-910e-957efbbb65d2.png)
+![image](https://user-images.githubusercontent.com/107410157/197270123-04beaa7d-0406-44a9-af7b-c6c8f09c4e9b.png)
+![image](https://user-images.githubusercontent.com/107410157/197270241-d97671e0-3e34-470c-a23e-21044d471263.png)
+![image](https://user-images.githubusercontent.com/107410157/197270429-0c30525a-68e7-4f2d-9750-896a3571403b.png)
 
 **Table 1: Data pre-processing and splitting**
 ![image](https://user-images.githubusercontent.com/107410157/197254121-be087390-af02-4a37-9eb4-214a3be52e4d.png)
