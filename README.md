@@ -74,14 +74,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 3. เพิ่ม/ปรับ Classifier layer
 
 ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning มีผลออกมาดังนี้
-1. **`"VGG16"`**
-![23](https://user-images.githubusercontent.com/86920208/197248327-10aeba9e-10f5-4cf9-bc51-44a0205e5ee1.png)
 
-2. **`"MobileNet"`**
-![24](https://user-images.githubusercontent.com/86920208/197236525-1a437eb9-cfac-4e81-a1ed-658b435f0aa1.png)
-
-3. **`"ResNet152V2"`**
-![25](https://user-images.githubusercontent.com/86920208/197236588-2943a18f-33b1-4b5f-8e40-4f0a249d6ada.png)
 
 ## Results:
 
