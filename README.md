@@ -47,7 +47,9 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 
 ## Data Augmentation :
+เราได้มีการทำ Data augmentation เพื่อให้ ......... โดยแต่ละ model เลือกใช้วิธีการทำ augmentation แตกต่างกันไป ดังตารางที่ 3
 
+**Table 3: Data Augmentation**
 | Model         | Image data augmentation                     |
 | ------------- |---------------------------------------------|
 | VGG16         |tf.keras.layers.RandomFlip                   |
@@ -58,14 +60,11 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |               |tf.keras.layers.RandomTranslation            |
 |               |tf.keras.layers.RandomRotation               |
 
-
-
-
 ## After Fine-tuning:
 
 เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดีด้วยการปรับพารามิเตอร์ ดังนี้
 
-**Table 2: Result before fine-tuning**
+**Table 4: Result before fine-tuning**
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
 | :------ | :----: |:-----:|:-----:|:-----:|:-----:|
 |**`"VGG16"`**|15|Conv2D : 3 Layer|activation="relu" & "tanh"|Adam|0.0001|
@@ -74,7 +73,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละโมลดังนี้
 
-**Table 3: Result after fine-tuning**
+**Table 5: Result after fine-tuning**
 | Model | AVG. Test Accuracy | SD Test Accuracy | AVG. Test Loss | SD Test Loss | AVG. Runtime with GPU (H:M:S) |
 | :------ | :----: |:-----:|:-----:|:-----:|:-----:|
 |**`"VGG16"`**|0.730|±0.0167|0.715|±0.0749|0:02:50|
