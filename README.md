@@ -29,7 +29,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 * ในการเตรียมข้อมูลรูปภาพ เราจัดเก็บรูปภาพทั้งหมด เป็น file .jpg จากนั้นใช้วิธีการ manual จัดเก็บแบ่งตาม folder ชื่อยี่ห้อ และ แยกเป็น 2 ส่วน คือ train_ds และ test_ds โดยแบ่งสัดส่วนของ train, validation และ test ตามรายละเอียดในตาราง
 * ทำการ label class ของยี่ห้อ เรียงตามลำดับตัวอักษร โดย 'apple' คือ class 0 และ 'samsung' คือ class 3 ตามลำดับ
 * ทำการ reshape โดย กำหนด input_shape = (224, 224, 3)
-*
+
 **Table 1: Data pre-processing and splitting**
 ![image](https://user-images.githubusercontent.com/107410157/197254121-be087390-af02-4a37-9eb4-214a3be52e4d.png)
 
