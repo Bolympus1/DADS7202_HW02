@@ -1,6 +1,5 @@
 # DADS7202_HW02 The pre-trained CNN
-
-![image](https://user-images.githubusercontent.com/107410157/197267527-bddde17d-d1cc-4b42-a87f-3bfeb1346421.png)
+![image](https://user-images.githubusercontent.com/107410157/197267919-ac58b7ea-f75d-4610-9408-eb14e26ceb85.png)
 
 ## Introduction: 
 
