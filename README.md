@@ -28,12 +28,14 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ## Data pre-processing and splitting :
 ในการเตรียมข้อมูลรูปภาพ เราจัดเก็บรูปภาพทั้งหมด เป็น file .jpg จากนั้นใช้วิธีการ manual จัดเก็บแบ่งตาม folder ชื่อยี่ห้อ และ แยกเป็น 2 ส่วน คือ train_ds และ test_ds โดยแบ่งสัดส่วนของ train,validationและ test ตามรายละเอียดในตาราง
 
+## Pre-train model:
+
 ## Data Augmentation :
 
 
 How to split train/test set? manual or method?
 
-## Pre-train model:
+## Fine-tuning:
 จุดที่ Fine Tuning ได้
 
 1. รูปแบบ Data Aug layer
