@@ -91,21 +91,10 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ![image](https://user-images.githubusercontent.com/107410157/197339391-58bc1626-bea3-4412-8d42-ae20f33c163a.png)
 
 
+![image](https://user-images.githubusercontent.com/107410157/197339449-49105519-6edd-4341-aaff-de7656118b79.png)
 
 
-
- - **`"VGG16"`**
- 
- ![image](https://user-images.githubusercontent.com/86920208/197242106-bb7c47f0-7009-4ee4-82c2-57f7f319bed3.png)
- 
- - **`"MobileNet"`**
- 
- ![image](https://user-images.githubusercontent.com/86920208/197242438-267ffb37-8307-46c2-bd21-ed170df14ac1.png)
-
- - **`"ResNet152V2"`**
- 
-![image](https://user-images.githubusercontent.com/86920208/197242572-f5c2f464-fd14-4cd0-92f8-9e95d1ce9f93.png)
-
+![image](https://user-images.githubusercontent.com/107410157/197339478-a33a2f23-e326-4ab8-be9f-a49997b5566f.png)
 
 
 
