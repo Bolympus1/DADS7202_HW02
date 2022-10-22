@@ -71,8 +71,8 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
 | :------ | :----: |:-----:|:-----:|:-----:|:-----:|
 |**`"VGG16"`**|15|Conv2D : 3 Layer|activation="relu" & "tanh"|Adam|0.0001|
-|**`"MobileNet"`**|100|'all trainable|activation="relu" & Dropout =0.5|Adam|0.0001|
-|**`"ResNet152V2"`**|30|'all trainable|activation="relu" & Dropout =0.2|Adam|0.0001|
+|**`"MobileNet"`**|100|all trainable|activation="relu" & Dropout =0.5|Adam|0.0001|
+|**`"ResNet152V2"`**|30|all trainable|activation="relu" & Dropout =0.2|Adam|0.0001|
 
 ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละ model ดังตารางที่ 5
 
