@@ -87,13 +87,9 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |**`"ResNet152V2"`**|0.795|±0.0447|0.873|±0.1333|0:02:46|
 
 ผลของการทายของแต่ละโมลเดล โดยชื่อของ class คือ Actual brand - Predict Brand
-
-![image](https://user-images.githubusercontent.com/107410157/197339737-71b55ad9-6c1c-4449-8615-eec75bf4ebad.png)
-
-![image](https://user-images.githubusercontent.com/107410157/197339391-58bc1626-bea3-4412-8d42-ae20f33c163a.png)
-![image](https://user-images.githubusercontent.com/107410157/197339449-49105519-6edd-4341-aaff-de7656118b79.png)
-![image](https://user-images.githubusercontent.com/107410157/197339478-a33a2f23-e326-4ab8-be9f-a49997b5566f.png)
-
+![image](https://user-images.githubusercontent.com/107410157/197339834-9673d5c7-33ed-47ed-871c-e18175d4b280.png)
+![image](https://user-images.githubusercontent.com/107410157/197339856-7be54850-cf39-4b85-9571-a7bfc3b41408.png)
+![image](https://user-images.githubusercontent.com/107410157/197339875-ef92e364-ad11-4c26-b3f3-5cfcad2a7094.png)
 
 
 ## Results:
