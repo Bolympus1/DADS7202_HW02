@@ -17,7 +17,7 @@ There are a lot of mobile phones in the market but **the appearance of every mob
  - [✨ Dataset](https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing) <br>
 Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing
 
-We collected 4 brands of mobile phone datasets which are Apple(iPhone), Huawei, OPPO, and Samsung that are still sale in 2022. We try to select various images in every dimension of the phone (frontside, backside, and some specific areas such as the camera ) source of the official image are from  BaNANA online shop **`"https://www.bnn.in.th/th"`** and unofficial image from Facebook market place. The total image that we collected from 2 sources is 434 images (iPhone 100 images, Huawei 124 images, Oppo 109 images, and Samsung 100 images).
+We collected 4 brands of mobile phone image(3 color channel) datasets which are Apple(iPhone), Huawei, OPPO, and Samsung that are still sale in 2022. We try to select various images in every dimension of the phone (frontside, backside, and some specific areas such as the camera ) source of the official image are from  BaNANA online shop **`"https://www.bnn.in.th/th"`** and unofficial image from Facebook market place. The total image that we collected from 2 sources is 434 images (iPhone 100 images, Huawei 124 images, Oppo 109 images, and Samsung 100 images).
 
 
 ## Assumption:
@@ -27,17 +27,19 @@ In this case our assumption about the pre-trained model is the largest model wil
 and the lowest accuracy is MobileNet.
 
 ## Data pre-processing and splitting :
-* Image Preparation : collected all images in .jpg and manually put them into the brand's folder then in a sub-folder split into 2 folders "train_ds" and "test_ds "of each brand.
+* Image Preparation : collected all images in .jpg and manually put them into the brand's folder then in a sub-folder split into 2 folders "train_ds" and "test_ds "of each brand. Ratio of train, validation and test as shown in table 1.
 
-* label class : Apple = 0, Huawei = 1, Oppo = 2, and Samsung = 3
+* We label images by importing datasets with tf.keras.utils.image_dataset_from_directory image will be labeled as the sub-folder name.
 
-* Resizing image dataset to (224, 224, 3)
+* label class : 0,1,2, and 3 mean Apple, Huawei, Oppo, and Samsung as ordered. then used "sparse_categorical_crossentropy" to calculate Loss
+
+* Resizing image dataset to 224 x 224 to match with model requirement.
 
 ![image](https://user-images.githubusercontent.com/107410157/197308226-29a91b68-5a4d-467e-9e3f-402624fc36fa.png)
 
 
 **Table 1: Data pre-processing and splitting**
-![image](https://user-images.githubusercontent.com/107410157/197307356-859c04f9-4520-4d96-b5c8-3c1c3124ba5d.png)
+![MicrosoftTeams-image](https://user-images.githubusercontent.com/86920208/197348853-1eac9f2a-a8c0-490f-b524-6c8b382d9b65.png)
 
 
 ## Before Fine-tuning:
