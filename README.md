@@ -118,6 +118,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ![MicrosoftTeams-image (11)](https://user-images.githubusercontent.com/107410157/197311406-017fbef7-854f-415a-a92b-a6b41c0b95ce.png)
 
 2.ขนาดของ Model ที่เหมาะสมกับขนาดของ data ของเรา บวกกับการปรับจูนพารามิเตอร์ที่เหมาะสม อาจทำให้ได้ Accuracy ที่ดี โดยไม่จำเป็นต้องใช้ Model ที่มีขนาดใหญ่เกินไป จากสมมติฐานที่เราตั้งไว้เบื้องต้น เราคาดว่า **`"VGG16"`** ซึ่งเป็น model ขนาดใหญ่ จะให้ผลที่ดีที่สุด แต่ผลออกมา ปรากฎว่า **`"MobileNet"`** ซึ่งเป็น model ขนาดเล็กกลับให้ผลที่ดีที่สุด
+
 ![image](https://user-images.githubusercontent.com/107410157/197337370-e4c943fe-e8e3-4be3-a43a-0bb05bbf1a10.png)
 
 
