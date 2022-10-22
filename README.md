@@ -85,6 +85,8 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |**`"MobileNet"`**|0.870|±0.0313|0.631|±0.1281|0:07:14|
 |**`"ResNet152V2"`**|0.795|±0.0447|0.873|±0.1333|0:02:46|
 
+
+
 ผลของการทายของแต่ละโมลเดล โดยชื่อของ class คือ Actual brand - Predict Brand
 ![image](https://user-images.githubusercontent.com/107410157/197340370-b178c8a0-4478-4d77-a95f-2cfe677bb599.png)
 ![image](https://user-images.githubusercontent.com/107410157/197340236-3596088e-27cb-46c3-9c76-139dc42eed42.png)
@@ -140,8 +142,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |Numpy|1.21.6|
 |TensorFlow|2.9.2|
 |GPU|NVIDIA GeForce RTX 3060 Laptop GPU|
-
-
+|Colab Pro|Tesla P100-PCIE-16GB/A100-SXM4-40GB|
 
 
 ## 🙋 Deepsleep's Member:
