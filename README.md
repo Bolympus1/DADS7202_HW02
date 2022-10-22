@@ -100,7 +100,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 
 ## Results:
-จาก model ที่เราเลือกมา 3 model พบว่า **`"MobileNet"`** ให้ค่า accuracy ที่ดีที่สุด โดยเฉลี่ยผลจากการรัน 5 รอบ Test accuracy เฉลี่ยเท่ากับ 87.00% +/-1.68% และ Test loss เฉลี่ยเท่ากับ 71.50% +/-7.49% เวลาที่ใช้รันบน GPU เฉลี่ยเท่ากับ 7 min 14 sec.
+จาก model ที่เราเลือกมา 3 model พบว่า **`"MobileNet"`** ให้ค่า accuracy ที่ดีที่สุด โดยเฉลี่ยผลจากการรัน 5 รอบ Test accuracy เฉลี่ยเท่ากับ 87.00% +/-3.13% และ Test loss เฉลี่ยเท่ากับ 63.13% +/-12.81% เวลาที่ใช้รันบน GPU เฉลี่ยเท่ากับ 7 min 14 sec.
 
 ![image](https://user-images.githubusercontent.com/107410157/197309429-bc6da6a4-b423-4b94-83ab-ac2f2abe1b16.png)
 
