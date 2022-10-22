@@ -31,7 +31,7 @@ and the lowest accuracy is MobileNet.
 
 * We label images by importing datasets with tf.keras.utils.image_dataset_from_directory image will be labeled as the sub-folder name.
 
-* label class : 0,1,2, and 3 mean Apple, Huawei, Oppo, and Samsung as ordered. then used "sparse_categorical_crossentropy" to calculate Loss
+* label class : 0,1,2, and 3 mean Apple, Huawei, Oppo, and Samsung as ordered. then used "sparse_categorical_crossentropy" to calculate Loss.
 
 * Resizing image dataset to 224 x 224 to match with model requirement.
 
