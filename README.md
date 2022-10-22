@@ -31,7 +31,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 
 **Table 1: Data pre-processing and splitting**
-
+![image](https://user-images.githubusercontent.com/107410157/197307356-859c04f9-4520-4d96-b5c8-3c1c3124ba5d.png)
 
 
 ## Before Fine-tuning:
@@ -45,7 +45,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |**`"ResNet152V2"`**| 0 | 2508.23 | 0:03:10 | Tesla T4
 
 ผลการทายของแต่ละโมเดล 
-![image](https://user-images.githubusercontent.com/107410157/197307356-859c04f9-4520-4d96-b5c8-3c1c3124ba5d.png)
+![image](https://user-images.githubusercontent.com/107410157/197340370-b178c8a0-4478-4d77-a95f-2cfe677bb599.png)
 ![image](https://user-images.githubusercontent.com/107410157/197340236-3596088e-27cb-46c3-9c76-139dc42eed42.png)
 ![image](https://user-images.githubusercontent.com/107410157/197340204-583dced2-bc65-476a-a6da-c19d97be76ac.png)
 
