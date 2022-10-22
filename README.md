@@ -17,7 +17,7 @@ There are a lot of mobile phones in the market but **the appearance of every mob
  - [✨ Dataset](https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing) <br>
 Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3qQ1eBGqpvZMb8ZJNta62rp4?usp=sharing
 
-เราได้ทำการเก็บรูปโทรศัพท์มือถือทั้ง 4 ยี่ห้อ ได้แก่ Apple(iPhone), Huawei, OPPO และ Samsung ที่มีวางจำหน่ายในปัจจุบัน (ปี 2022) โดยเลือกเก็บรูปถ่ายในหลากหลายมุมมอง ทั้งด้านหน้า ด้านหลัง ด้านข้าง รูปเฉาพส่วน เช่น ส่วนกล้องถ่ายรูป โดยแหล่งที่เก็บเราได้เก็บมาจาก official page BaNANA online shop **`"https://www.bnn.in.th/th"`** และ unofficial page (Facebook market place) เพื่อให้ข้อมูล คุณภาพของภาพมีความหลากหลาย รวมทั้งหมด 434 ภาพ โดยแบ่งเป็น iPhone 100 ภาพ, Huawei 125 ภาพ, OPPO 109 ภาพ และ Samsung 100 ภาพ.
+We collected 4 brands of mobile phone datasets which are Apple(iPhone), Huawei, OPPO, and Samsung that are still sale in 2022. We try to select various images in every dimension of the phone (frontside, backside, and some specific areas such as the camera ) source of the official image are from  BaNANA online shop **`"https://www.bnn.in.th/th"`** and unofficial image from Facebook market place. The total image that we collected from 2 sources is 434 images (iPhone 100 images, Huawei 124 images, Oppo 109 images, and Samsung 100 images).
 
 
 ## Assumption:
@@ -27,9 +27,13 @@ In this case our assumption about the pre-train model is the largest model will 
 and the lowest accuracy is MobileNet
 
 ## Data pre-processing and splitting :
- * ในการเตรียมข้อมูลรูปภาพ เราจัดเก็บรูปภาพทั้งหมด เป็น file .jpg จากนั้นใช้วิธีการ manual จัดเก็บแบ่งตาม folder ชื่อยี่ห้อ และ แยกเป็น 2 ส่วน คือ train_ds และ test_ds โดยแบ่งสัดส่วนของ train, validation และ test ตามรายละเอียดในตารางที่ 1
-* ทำการ label class ของยี่ห้อ เรียงตามลำดับตัวอักษร โดย 'apple' คือ class 0 และ 'samsung' คือ class 3 ตามลำดับ
-* ทำการ resize โดย กำหนด input_shape = (224, 224, 3)
+* Image Preparation : collected all images in .jpg and manually put in into the brand's folder then in a sub-folder split into 2 folders "train_ds" and "test_ds "of each brand.
+
+* label class : Apple = 0, Huawei = 1, Oppo = 2, and Samsung = 3
+
+* Resizing
+Resizing image dataset to (224, 224, 3)
+
 ![image](https://user-images.githubusercontent.com/107410157/197308226-29a91b68-5a4d-467e-9e3f-402624fc36fa.png)
 
 
@@ -38,7 +42,7 @@ and the lowest accuracy is MobileNet
 
 
 ## Before Fine-tuning:
-ในการศึกษาครั้งนี้ ผลของ pre-train model ก่อน fine-tuning พบว่า ทั้ง 3 model (**`"VGG16"`**, **`"ResNet152V2"`** , **`"MobileNet"`**) ให้ค่า Accuracy = 0 นั่นหมายความว่า pre-train model ทั้ง 3 ไม่สามารถจำแนกยี่ห้อของโทรศัพท์ตามที่เราต้องการศึกษาได้ โดยผลของการ prediction มีการทำนาย iPhone ว่าเป็น projector, ทำนาย Huawei ว่าเป็น ipod, ทำนาย Oppo ว่าเป็น switch, ทำนาย Samsung ว่าเป็น notebook เป็นต้น
+From testing all the pre-train model (**`"VGG16"`**, **`"ResNet152V2"`** , **`"MobileNet"`**) before fine-tuning the result of all model show accuracy = 0 which mean all these 3 models can't tell the mobile phone brand that we want. Example of model prediction show iPhone = projector,  Huawei = iPod, Oppo = switch, and Samsung = notebook.
 
 **Table 2: Result before fine-tuning**
 | Model |Test Accuracy | Test Loss | Runtime with GPU (H:M:S) | GPU Name |
@@ -67,7 +71,7 @@ and the lowest accuracy is MobileNet
 
 ## After Fine-tuning:
 
-เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดีขึ้น ด้วยการปรับพารามิเตอร์ต่างๆ ดังนี้
+the parameter that we adjust from the pre-trained model  to get more accuracy is
 
 **Table 4: Fine-tuning parameters**
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
