@@ -129,7 +129,8 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ## References:
 * https://keras.io/api/applications/
-x ref code Aj.
+* 
+* ref code Aj.
 
 x
 
