@@ -118,7 +118,8 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ![MicrosoftTeams-image (11)](https://user-images.githubusercontent.com/107410157/197311406-017fbef7-854f-415a-a92b-a6b41c0b95ce.png)
 
 2.
-![image](https://user-images.githubusercontent.com/107410157/197336893-d07eac32-9951-479d-b7b2-ab225d9747d5.png)
+![image](https://user-images.githubusercontent.com/107410157/197337370-e4c943fe-e8e3-4be3-a43a-0bb05bbf1a10.png)
+
 
 
 3.การ split data มีผลต่อความหลากหลายของรูปภาพใน train/test set หากเรานำภาพที่คล้ายๆกันไปกองอยู่ใน train set หรือ test set อาจทำให้เกิดการ bias ต่อผล accuracy ที่ได้ หากนำ model นี้ไปใช้งานกับ test set ชุดอื่นๆที่ได้จากการเก็บ data ครั้งถัดไป อาจพบว่า โมเดลจะทายไม่ถูกมากขึ้น
