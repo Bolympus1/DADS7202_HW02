@@ -33,7 +33,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ![image](https://user-images.githubusercontent.com/107410157/197270429-0c30525a-68e7-4f2d-9750-896a3571403b.png)
 
 **Table 1: Data pre-processing and splitting**
-![image](https://user-images.githubusercontent.com/107410157/197254121-be087390-af02-4a37-9eb4-214a3be52e4d.png)
+![image](https://user-images.githubusercontent.com/107410157/197307356-859c04f9-4520-4d96-b5c8-3c1c3124ba5d.png)
 
 
 
