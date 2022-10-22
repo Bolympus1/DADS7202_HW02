@@ -96,8 +96,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 จาก model ที่เราเลือกมา 3 model พบว่า **`"MobileNet"`** ให้ค่า accuracy ที่ดีที่สุด โดยผลจากการรันแบบ random seed 5 รอบ Test accuracy เฉลี่ยเท่ากับ 87.00% +/-3.13% และ Test loss เฉลี่ยเท่ากับ 63.13% +/-12.81% เวลาที่ใช้ในการ train model บน GPU เฉลี่ยเท่ากับ 7 min 14 sec ซึ่งหากพิจารณาในด้านเวลา **`"MobileNet"`** จะใช้เวลาในการ train มากที่สุด เนื่องด้วยการกำหนดค่า epoc ที่สูงกว่า อีก 2 model และ ข้อจำกัดของการรันบน Colab
 
 ![image](https://user-images.githubusercontent.com/107410157/197309429-bc6da6a4-b423-4b94-83ab-ac2f2abe1b16.png)
-![image](https://user-images.githubusercontent.com/107410157/197340170-7cb28117-43f5-4161-b41f-07d14be82fc4.png)
-![image](https://user-images.githubusercontent.com/107410157/197340187-3e1907b8-8956-473f-8033-742d020a6237.png)
+
 
 
 
