@@ -134,13 +134,21 @@ All of the models that we choose,  **`"MobileNet"`** have the best accuracy scor
 * ผลของ model after fine-tuning ไม่ตรงกับสมมติฐานที่ได้ตั้งไว้ในเบื้องต้น ที่คาดว่า **`"VGG16"`** ที่เป็นตัวแทนของ model ที่มีขนาดใหญ่สุดจากที่เลือก จะให้ผล Accuracy ที่ดีที่สุด แต่ผล after fine-tuning พบว่า **`"MobileNet"`** ที่เป็นตัวแทนของ model ที่มีขนาดเล็กสุด ให้ผล Accuracy ที่สูงที่สุด รองลงมาคือ **`"ResNet152V2"`** ที่เป็นตัวแทนของ model ที่มีขนาดกลาง ส่วน **`"VGG16"`** ให้ผล Accuracy ที่น้อยที่สุด
 
 
-
-
 ## References:
-* https://keras.io/api/applications/
-* 
-* ref code Aj.
-* 
+* Tensorflow
+https://www.tensorflow.org/tutorials/images/classification
+https://www.tensorflow.org/tutorials/load_data/images
+https://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directory
+https://www.tensorflow.org/api_docs/python/tf/keras/Model#predict
+
+* Keras (https://keras.io/api/)
+https://keras.io/examples/vision/image_classification_from_scratch/
+https://keras.io/guides/preprocessing_layers/
+
+* Data_loading >> https://keras.io/api/data_loading/image/
+image_dataset_from_directory function = Generates a tf.data.Dataset from image files in a directory. (https://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directory)
+
+
 ## References version:
 | Library | Version |
 | :------ | :----: |
