@@ -107,7 +107,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 จากการศึกษาในครั้งนี้ กลุ่มเราได้สรุปประเด็นที่น่าสนใจในการทำ Deep Learning กับ image dataset ดังนี้
 
-**1. การ train image data ต้องใช้ resource ในการรันอย่างมาก ซึ่งทางกลุ่มพบปัญหาว่าไม่สามารถรันบน local pc ได้เลย เนื่องจาก session crash due to ran out of RAM**
+**1. ได้มีการลองรัน Model NASNetLarge ที่มีขนาดใหญ่ และจำนวน parameter เยอะ แต่ไม่สามารถรันได้ เนื่องจากต้องใช้ทรัพยากรในการรันอย่างมาก (session crash due to ran out of RAM)**
 
 ![MicrosoftTeams-image (11)](https://user-images.githubusercontent.com/107410157/197311406-017fbef7-854f-415a-a92b-a6b41c0b95ce.png)
 
