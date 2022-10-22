@@ -111,10 +111,10 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 **2. ขนาดของ Model ที่เหมาะสมกับขนาดของ data ของเรา บวกกับการปรับจูนพารามิเตอร์ที่เหมาะสม อาจทำให้ได้ Accuracy ที่ดี โดยไม่จำเป็นต้องใช้ Model ที่มีขนาดใหญ่เกินไป 
 จากสมมติฐานที่เราตั้งไว้เบื้องต้น เราคาดว่า VGG16 ซึ่งเป็น model ขนาดใหญ่ จะให้ผลที่ดีที่สุด แต่ผลออกมา ปรากฎว่า MobileNet ซึ่งเป็น model ขนาดเล็กกลับให้ผลที่ดีที่สุด**
-(https://keras.io/api/applications/)
 
 ![image](https://user-images.githubusercontent.com/107410157/197337370-e4c943fe-e8e3-4be3-a43a-0bb05bbf1a10.png)
 
+(https://keras.io/api/applications/)
 
 **3. การ split data มีผลต่อความหลากหลายของรูปภาพใน train/test set หากเรานำภาพที่คล้ายๆกันไปกองอยู่ใน train set หรือ test set อาจทำให้เกิดการ bias ต่อผล accuracy ที่ได้ หากนำ model นี้ไปใช้งานกับ test set ชุดอื่นๆที่ได้จากการเก็บ data ครั้งถัดไป อาจพบว่า โมเดลจะทายไม่ถูกมากขึ้น**
 
