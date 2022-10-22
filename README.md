@@ -74,6 +74,9 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |**`"MobileNet"`**|100|all trainable|activation="relu" & Dropout =0.5|Adam|0.0001|
 |**`"ResNet152V2"`**|30|all trainable|activation="relu" & Dropout =0.2|Adam|0.0001|
 
+**Train accuracy/Train loss**
+![train acc chart](https://user-images.githubusercontent.com/107410157/197314810-71adb873-90e2-43e2-95f0-17be407e13a4.jpg)
+
 ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละ model ดังตารางที่ 5
 
 **Table 5: Result after fine-tuning**
