@@ -69,7 +69,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 **Table 4: Fine-tuning parameters**
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
-| :------ | :----: |:-----:|-----:|:-----:|:-----:|
+| :------ | :----: |:-----:|--------|:-----:|:-----:|
 |**`"VGG16"`**|15|Conv2D : 3 Layer|activation="relu" & "tanh"|Adam|0.0001|
 |**`"MobileNet"`**|100|all trainable|activation="relu" & Dropout =0.5|Adam|0.0001|
 |**`"ResNet152V2"`**|30|all trainable|activation="relu" & Dropout =0.2|Adam|0.0001|
