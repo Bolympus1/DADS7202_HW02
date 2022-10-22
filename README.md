@@ -52,10 +52,10 @@ From testing all the pre-trained model (**`"VGG16"`**, **`"ResNet152V2"`** , **`
 |**`"MobileNet"`**| 0 | 13.3670 | 0:02:41 | Tesla T4
 |**`"ResNet152V2"`**| 0 | 2508.23 | 0:03:10 | Tesla T4
 
-![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/86920208/197349159-4e116fc5-017e-49b3-98ac-6dca7eda4dfb.png)
-
 Result of pre-trained model.
 ![image](https://user-images.githubusercontent.com/107410157/197340501-6658c397-1659-48f6-bbd2-8c6a4364263e.png)
+
+![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/86920208/197349159-4e116fc5-017e-49b3-98ac-6dca7eda4dfb.png)
 
 
 ## Data Augmentation :
@@ -77,11 +77,11 @@ We decided to do data augmentation to increase the number of dataset and minimiz
 To get more accuracy, the parameter that we adjust from the pre-trained model.
 
 **Table 4: Fine-tuning parameters**
-| Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
-| :------ | :----: |:-----:|--------|:-----:|:-----:|
-|**`"VGG16"`**|15|Conv2D : 3 Layer|activation="relu" & "tanh"|Adam|0.0001|
-|**`"MobileNet"`**|100|all trainable|activation="relu" & Dropout =0.5|Adam|0.0001|
-|**`"ResNet152V2"`**|30|all trainable|activation="relu" & Dropout =0.2|Adam|0.0001|
+| Model | epoc |Unfreeze pre-train model (Part Feature Extraction)|  Feature extraction layer | classifier | Optimizer | Initial learning rate |
+| :---- | :--: |:----------:|:-----------------:|------------|:---------:|:-------------:|
+|**`"VGG16"`**|15|10-19|Conv2D : 3 Layer|activation="relu" & "tanh"|Adam|0.0001|
+|**`"MobileNet"`**|100|All|-|activation="relu" & Dropout =0.5|Adam|0.0001|
+|**`"ResNet152V2"`**|30|130-564|-|activation="relu" & Dropout =0.2|Adam|0.0001|
 
 **Train accuracy/Train loss**
 ![image](https://user-images.githubusercontent.com/107410157/197338882-ee1b09af-3c49-4c88-a945-29f753e8cb0b.png)
@@ -90,7 +90,7 @@ After running 5 times, 3 models after fine-tuning results say the models can pre
 
 **Table 5: Result after fine-tuning**
 | Model | AVG. Test Accuracy | SD Test Accuracy | AVG. Test Loss | SD Test Loss | AVG. Runtime with GPU (H:M:S) |
-| :------ | :----: |:-----:|:-----:|:-----:|:-----:|
+| :---- | :----------------: |:----------------:|:-----:|:-----:|:-----:|
 |**`"VGG16"`**|0.730|±0.0167|0.715|±0.0749|0:02:50|
 |**`"MobileNet"`**|0.870|±0.0313|0.631|±0.1281|0:07:14|
 |**`"ResNet152V2"`**|0.795|±0.0447|0.873|±0.1333|0:02:46|
@@ -113,45 +113,22 @@ All of the models that we choose,  **`"MobileNet"`** have the best accuracy scor
 
 
 
-## Discussion:
+## Discussion & Conclusion:
 
-จากการศึกษาในครั้งนี้ กลุ่มเราได้สรุปประเด็นที่น่าสนใจในการทำ Deep Learning กับ image dataset ดังนี้
-
-**1. ได้มีการลองรัน Model **`"NASNetLarge"`** ที่มีขนาดใหญ่ และจำนวน parameter เยอะ แต่ไม่สามารถรันได้ เนื่องจากต้องใช้ทรัพยากรในการรันอย่างมาก (session crash due to ran out of RAM)**
+1. Model before fine-tuning
+* Model cannot distinguish mobile phone brands but can be predicted as things similar in ImageNet Dataset, such as an iPod.
+* Train Accuracy is equal to zero because we freeze the whole model so it doesn't learn any new image dataset.
+* Loss value derived from an initial loss that the model randomly generates.
+2. Model before fine-tuning
+* Based on our preliminary assumptions, we expect VGG 16 have the best accuracy. But, as a result, it turns out that MobileNet which is a small model that gives the best results.
+* Unfreeze layer feature extraction has a significant effect on the performance. MobileNet had the most unfreeze, followed by RestNet152V2 and VGG16 respectively, corresponding to the predicted accuracy.
+* Model architecture has an important role in simplifying the fine-tuning performance. With the more complex model, there is a chance to increase accuracy more easily.
+* Preparing a small amount of train dataset resulted in the inability to adjust the batch size and cause overfit problems. In addition, there was a case of train accuracy hitting the ceiling by equal to 1, after it was going through multiple epochs.
+* Train/Test Dataset segmentation has an important role, the team found the problem data collected is not completely mixed or random. ( Team random only Train/Valid dataset )
+* Increasing the variety of Data augmentation does not increase accuracy. The team found that the more Data augmentation, the lower the accuracy value. It should be put to suit the situation.
+* Choosing a model with a large number of parameters or increasing the number of layers, must take into account the amount of RAM memory. The size of the model that is suitable for the size of data, and the appropriate parameter tuning is important.
 
 ![MicrosoftTeams-image (11)](https://user-images.githubusercontent.com/107410157/197311406-017fbef7-854f-415a-a92b-a6b41c0b95ce.png)
-
-**2. ขนาดของ Model ที่เหมาะสมกับขนาดของ data ของเรา บวกกับการปรับจูนพารามิเตอร์ที่เหมาะสม อาจทำให้ได้ Accuracy ที่ดี โดยไม่จำเป็นต้องใช้ Model ที่มีขนาดใหญ่เกินไป 
-จากสมมติฐานที่เราตั้งไว้เบื้องต้น เราคาดว่า VGG16 ซึ่งเป็น model ขนาดใหญ่ จะให้ผลที่ดีที่สุด แต่ผลออกมา ปรากฎว่า MobileNet ซึ่งเป็น model ขนาดเล็กกลับให้ผลที่ดีที่สุด**
-
-![image](https://user-images.githubusercontent.com/107410157/197337370-e4c943fe-e8e3-4be3-a43a-0bb05bbf1a10.png)
-
-(https://keras.io/api/applications/)
-
-**3. การ split data มีผลต่อความหลากหลายของรูปภาพใน train/test set หากเรานำภาพที่คล้ายๆกันไปกองอยู่ใน train set หรือ test set อาจทำให้เกิดการ bias ต่อผล accuracy ที่ได้ หากนำ model นี้ไปใช้งานกับ test set ชุดอื่นๆที่ได้จากการเก็บ data ครั้งถัดไป อาจพบว่า โมเดลจะทายไม่ถูกมากขึ้น**
-
-**4. การพิจารณาทำ Data Augmentation ที่เหมาะสม ช่วยให้ลดเวลา และ save resource ในการรันอย่างมาก**
-
-## Conclusion:
-
-* ผลของ model before fine-tuning ทั้ง 3 model ยังไม่สามารถแยกยี่ห้อของโทรศัพท์ได้
-* ผลของ model after fine-tuning ไม่ตรงกับสมมติฐานที่ได้ตั้งไว้ในเบื้องต้น ที่คาดว่า **`"VGG16"`** ที่เป็นตัวแทนของ model ที่มีขนาดใหญ่สุดจากที่เลือก จะให้ผล Accuracy ที่ดีที่สุด แต่ผล after fine-tuning พบว่า **`"MobileNet"`** ที่เป็นตัวแทนของ model ที่มีขนาดเล็กสุด ให้ผล Accuracy ที่สูงที่สุด รองลงมาคือ **`"ResNet152V2"`** ที่เป็นตัวแทนของ model ที่มีขนาดกลาง ส่วน **`"VGG16"`** ให้ผล Accuracy ที่น้อยที่สุด
-
-
-## References:
-* Tensorflow
-https://www.tensorflow.org/tutorials/images/classification
-https://www.tensorflow.org/tutorials/load_data/images
-https://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directory
-https://www.tensorflow.org/api_docs/python/tf/keras/Model#predict
-
-* Keras (https://keras.io/api/)
-https://keras.io/examples/vision/image_classification_from_scratch/
-https://keras.io/guides/preprocessing_layers/
-
-* Data_loading >> https://keras.io/api/data_loading/image/
-image_dataset_from_directory function = Generates a tf.data.Dataset from image files in a directory. (https://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directory)
-
 
 ## References version:
 | Library | Version |
@@ -163,12 +140,12 @@ image_dataset_from_directory function = Generates a tf.data.Dataset from image f
 |Colab Pro|Tesla P100-PCIE-16GB/A100-SXM4-40GB|
 
 ## References:
-Code from class DADS7202
-https://keras.io/api/applications/
-https://keras.io/examples/vision/image_classification_from_scratch/
-https://keras.io/guides/preprocessing_layers/
-https://www.tensorflow.org/tutorials/load_data/images
-https://www.tensorflow.org/tutorials/images/classification
+* Code from class DADS7202
+* https://keras.io/api/applications/
+* https://keras.io/examples/vision/image_classification_from_scratch/
+* https://keras.io/guides/preprocessing_layers/
+* https://www.tensorflow.org/tutorials/load_data/images
+* https://www.tensorflow.org/tutorials/images/classification
 
 
 ## 🙋 Deepsleep's Member:
