@@ -57,7 +57,7 @@ Result of pre-trained model.
 
 
 ## Data Augmentation :
-We decided to do data augmentation to minimize overfit and each model use different data augmentation combination to perform the best result of each model as shown in table3 below.
+We decided to do data augmentation to increase the number of dataset and minimize overfit and each model use different data augmentation combination to perform the best result of each model as follow.
 
 **Table 3: Data Augmentation**
 | Model         | Image data augmentation                     |
@@ -159,6 +159,14 @@ image_dataset_from_directory function = Generates a tf.data.Dataset from image f
 |TensorFlow|2.9.2|
 |GPU|NVIDIA GeForce RTX 3060 Laptop GPU|
 |Colab Pro|Tesla P100-PCIE-16GB/A100-SXM4-40GB|
+
+## References:
+Code from class DADS7202
+https://keras.io/api/applications/
+https://keras.io/examples/vision/image_classification_from_scratch/
+https://keras.io/guides/preprocessing_layers/
+https://www.tensorflow.org/tutorials/load_data/images
+https://www.tensorflow.org/tutorials/images/classification
 
 
 ## 🙋 Deepsleep's Member:
