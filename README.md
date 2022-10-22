@@ -132,21 +132,15 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 * https://keras.io/api/applications/
 * 
 * ref code Aj.
+* 
+## References version:
+| Library | Version |
+| :------ | :----: |
+|**`"Python"`**|3.7.15|
+|**`"Numpy"`**|1.21.6|
+|**`"TensorFlow"`**|2.9.2|
 
-x
 
-x
-
-
-x
-
-x
-
-x
-
-x
-
-x
 
 ## 🙋 Deepsleep's Member:
 | %|ID|Name |Responsibility  |
