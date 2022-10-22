@@ -122,28 +122,17 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 จากสมมติฐานที่เราตั้งไว้เบื้องต้น เราคาดว่า VGG16 ซึ่งเป็น model ขนาดใหญ่ จะให้ผลที่ดีที่สุด แต่ผลออกมา ปรากฎว่า MobileNet ซึ่งเป็น model ขนาดเล็กกลับให้ผลที่ดีที่สุด**
 
 ![image](https://user-images.githubusercontent.com/107410157/197337370-e4c943fe-e8e3-4be3-a43a-0bb05bbf1a10.png)
-
+https://keras.io/api/applications/
 
 **3. การ split data มีผลต่อความหลากหลายของรูปภาพใน train/test set หากเรานำภาพที่คล้ายๆกันไปกองอยู่ใน train set หรือ test set อาจทำให้เกิดการ bias ต่อผล accuracy ที่ได้ หากนำ model นี้ไปใช้งานกับ test set ชุดอื่นๆที่ได้จากการเก็บ data ครั้งถัดไป อาจพบว่า โมเดลจะทายไม่ถูกมากขึ้น**
 
+**4. การพิจารณาทำ Data Augmentation ที่เหมาะสม ช่วยให้ลดเวลา และ save resource ในการรันอย่างมาก**
 
 ## Conclusion:
-* ซึ่งผลการศึกษาในครั้งนี้ ไม่ตรงกับสมมติฐานที่ได้ตั้งไว้ในเบื้องต้น ที่คาดว่า VGG16 ที่มีขนาดของ model gxHo 
 
-x
+* ผลของ model before fine-tuning ทั้ง 3 model ยังไม่สามารถแยกยี่ห้อของโทรศัพท์ได้
+* ผลของ model after fine-tuning ไม่ตรงกับสมมติฐานที่ได้ตั้งไว้ในเบื้องต้น ที่คาดว่า **`"VGG16"`** ที่เป็นตัวแทนของ model ที่มีขนาดใหญ่สุดจากที่เลือก จะให้ผล Accuracy ที่ดีที่สุด แต่ผล after fine-tuning พบว่า **`"MobileNet"`** ที่เป็นตัวแทนของ model ที่มีขนาดเล็กสุด ให้ผล Accuracy ที่สูงที่สุด รองลงมาคือ **`"ResNet152V2"`** ที่เป็นตัวแทนของ model ที่มีขนาดกลาง ส่วน **`"VGG16"`** ให้ผล Accuracy ที่น้อยที่สุด
 
-x
-
-
-x
-
-x
-
-x
-
-x
-
-x
 
 
 
