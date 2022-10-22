@@ -88,7 +88,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ผลของการทายของแต่ละโมลเดล โดยชื่อของ class คือ Actual brand - Predict Brand
 
-![image](https://user-images.githubusercontent.com/107410157/197339324-c3c5751e-c1d1-456f-8a05-85674128b8ea.png)
+![image](https://user-images.githubusercontent.com/107410157/197339391-58bc1626-bea3-4412-8d42-ae20f33c163a.png)
 
 
 
