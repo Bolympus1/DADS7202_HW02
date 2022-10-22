@@ -3,9 +3,9 @@
 
 ## Introduction: 
 
-Nowadays there are a lot of mobile phones in the market. There has a lot of unique functions for their brand. However the appearance of mobile phone are very the same, making the customer very confused when they try to find a phone that they want. "which one is the right one that I want?" or "Is this the phone that I'm looking for?" there is the most question when customer try to find the phone because when searching mobile phone on Google, sometimes the picture that comes up looks like the brand that search but it isn't. Because of this problem, our team comes up with the idea of "Classification of mobile phone brand" to classify the picture of mobile phones which one is which brand. From our discussion, we choose 4 mobile phone brands that we think it's easy to confuse and hard to tell which brand is the right one.
+Nowadays, there are a lot of mobile phones in the market. Because the appearance of mobile phone are very the same, it makes the customer very confused when they try to find a phone. When searching mobile phone on Google, the picture always looks like the brand that search but it isn't. Because of this problem, our team comes up with the idea to classify the picture of mobile phones. From our discussion, we choose 4 mobile phone brands that we think it's easy to confuse and hard to tell which brand is the right one.
 
-There are a lot of mobile phones in the market but **the appearance of every mobile phone are look the same** makes it hard for the customer to find the phone that they want. Even the photo of the phone on Google sometimes the picture that comes up looks like the brand that searched but it isn't. **Because of this problem our team come up with the idea** **`" Classification of mobile phone brand"`** to classify the picture of mobile phones which one is which brand.
+There are a lot of mobile phone brands in the market. **The appearance of every mobile phone are look the same** so it hard for the customer to find the phone that they want. Because of this problem, we have the idea to classify the picture of mobile phone brands.
 
 * 📱 **`Apple (iPhone)`**    
 * 📱 **`Huawei`**
