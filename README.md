@@ -158,21 +158,3 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 ## End credit: 
 **This project is a part of Course DADS7202 Deep Learning, Data Analytics and Data Science, NIDA.**
 
-1. รูปแบบ Data Aug layer
-2. Feature extraction
-2.1 แก้ freeze ของ pre-train
-2.2 เพิ่ม Convolution / pooling ต่อจาก pre-train
-3. เพิ่ม/ปรับ Classifier layer
-Note : การเขียนรายงาน HW02
-
--ให้เครดิตที่มาของภาพ dataset
-
--เป็น dataset ที่ pre-train ยังทำงานได้ไม่ดี
-
--ต้องเปรียบเทียบอย่างน้อย 3 backbone(feature extracter) สำหรับกลุ่มที่เลือกทำหัวข้อ classifier
-
-เช่น เปลี่ยนจาก VGG เป็น efficientDet แล้วสรุปผลเปรียบเทียบ
-
-(เพราะการเปลี่ยน backbone จะเป็นจุดเปลี่ยนประสิทธิภาพของผลลัพธ์ได้ง่ายที่สุดและได้ผลดีที่สุด)
-
--สรุปผลรายงาน ให้มีผลของการทำ pre-train ด้วยว่า ผลก่อน fine-tune เป็นอย่างไร แล้วผลหลัง fune-tune เป็นอย่างไร
