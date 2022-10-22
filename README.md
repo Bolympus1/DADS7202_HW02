@@ -21,7 +21,7 @@ We collected 4 brands of mobile phone image(3 color channel) datasets which are 
 
 
 ## Assumption:
-We think the pre-trained model that validation on ImageNet dataset can't classify present moblie phone design to tell which image is which brand cause of that we choose 3 models such as VGG16, ResNet152V2, and MobileNet for study in this project.
+We think the pre-trained model that validation on ImageNet dataset can't classify present moblie phone design. We choose 3 models including VGG16, ResNet152V2, and MobileNet for study in this project.
 
 In this case our assumption about the pre-trained model is the largest model will have the best accuracy which is VGG16
 and the lowest accuracy is MobileNet.
