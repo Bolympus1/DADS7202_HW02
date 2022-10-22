@@ -159,7 +159,7 @@ x
 
 
 ## End credit: 
-This project is a part of Course DADS7202 Deep Learning, Data Analytics and Data Science, NIDA.
+**This project is a part of Course DADS7202 Deep Learning, Data Analytics and Data Science, NIDA.**
 
 1. รูปแบบ Data Aug layer
 2. Feature extraction
