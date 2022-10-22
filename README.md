@@ -67,7 +67,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดีด้วยการปรับพารามิเตอร์ ดังนี้
 
-**Table 4: Result before fine-tuning**
+**Table 4: Fine-tuning parameters**
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
 | :------ | :----: |:-----:|:-----:|:-----:|:-----:|
 |**`"VGG16"`**|15|Conv2D : 3 Layer|activation="relu" & "tanh"|Adam|0.0001|
