@@ -139,6 +139,8 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |Python|3.7.15|
 |Numpy|1.21.6|
 |TensorFlow|2.9.2|
+|GPU|NVIDIA GeForce RTX 3060 Laptop GPU|
+
 
 
 
