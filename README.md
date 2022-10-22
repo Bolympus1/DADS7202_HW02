@@ -46,7 +46,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |**`"ResNet152V2"`**| 0 | 2508.23 | 0:03:10 | Tesla T4
 
 ผลการทายของแต่ละโมเดล 
-![image](https://user-images.githubusercontent.com/107410157/197261428-1128f9cb-3f2b-4aa4-9068-3934c55e045e.png)
+![image](https://user-images.githubusercontent.com/107410157/197308600-4f872a6d-8f47-4f41-93e9-aa1666180ce1.png)
 
 
 ## Data Augmentation :
