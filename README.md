@@ -3,9 +3,9 @@
 
 ## Introduction: 
 
-Nowadays there are a lot of mobile phones in the market, there has a lot of unique function for their brand. However the appearance of mobile phone are very the same, make the customer very confused when they try to find a phone that they want. "which one is the right one that I want?" or "Is this the phone that I'm looking for?" there is the most question when customer try to find the phone because when search mobile phone on Google, sometime the picture that comes up looks like the brand that search but it isn't. Because of this problem, our team come with the idea "Classification of mobile phone brand" to classified the picture of mobile phone which one is which brand. From our discussion we choose 4 mobile phone's brand that we think it's easy to confuse and hard to tell which brand is the right one.
+Nowadays there are a lot of mobile phones in the market. There has a lot of unique functions for their brand. However the appearance of mobile phone are very the same, making the customer very confused when they try to find a phone that they want. "which one is the right one that I want?" or "Is this the phone that I'm looking for?" there is the most question when customer try to find the phone because when searching mobile phone on Google, sometimes the picture that comes up looks like the brand that search but it isn't. Because of this problem, our team comes up with the idea of "Classification of mobile phone brand" to classify the picture of mobile phones which one is which brand. From our discussion, we choose 4 mobile phone brands that we think it's easy to confuse and hard to tell which brand is the right one.
 
-There are a lot of mobile phones in the market but **the appearance of every mobile phone are look the same** make it's hard for the customer to find a phone that they want.  even the photo of the phone on Google sometime the picture that comes up looks like the brand that search but it isn't. **Because of this problem our team come with the idea** **`"Classification of mobile phone brand"`** to classified the picture of mobile phone which one is which brand
+There are a lot of mobile phones in the market but **the appearance of every mobile phone are look the same** makes it hard for the customer to find the phone that they want. Even the photo of the phone on Google sometimes the picture that comes up looks like the brand that searched but it isn't. **Because of this problem our team come up with the idea** **`" Classification of mobile phone brand"`** to classify the picture of mobile phones which one is which brand
 
 * 📱 **`Apple (iPhone)`**    
 * 📱 **`Huawei`**
@@ -21,9 +21,9 @@ We collected 4 brands of mobile phone datasets which are Apple(iPhone), Huawei, 
 
 
 ## Assumption:
-In this project, we think the pre-train model that validation on ImageNet dataset can't classify present moblie phone design to tell which image is which brand cause of that we choose 3 models such as VGG16, ResNet152V2, and MobileNet.
+In this project, we think the pre-trained model that validation on ImageNet dataset can't classify present moblie phone design to tell which image is which brand cause of that we choose 3 models such as VGG16, ResNet152V2, and MobileNet.
 
-In this case our assumption about the pre-train model is the largest model will have the most accuracy which is VGG16
+In this case our assumption about the pre-trained model is the largest model will have the most accuracy which is VGG16
 and the lowest accuracy is MobileNet
 
 ## Data pre-processing and splitting :
@@ -42,7 +42,7 @@ Resizing image dataset to (224, 224, 3)
 
 
 ## Before Fine-tuning:
-From testing all the pre-train model (**`"VGG16"`**, **`"ResNet152V2"`** , **`"MobileNet"`**) before fine-tuning the result of all model show accuracy = 0 which mean all these 3 models can't tell the mobile phone brand that we want. Example of model prediction show iPhone = projector,  Huawei = iPod, Oppo = switch, and Samsung = notebook.
+From testing all the pre-trained model (**`"VGG16"`**, **`"ResNet152V2"`** , **`"MobileNet"`**) before fine-tuning the result of all model show accuracy = 0 which mean all these 3 models can't tell the mobile phone brand that we want. Example of model prediction show iPhone = projector,  Huawei = iPod, Oppo = switch, and Samsung = notebook.
 
 **Table 2: Result before fine-tuning**
 | Model |Test Accuracy | Test Loss | Runtime with GPU (H:M:S) | GPU Name |
