@@ -83,7 +83,7 @@ the parameter that we adjust from the pre-trained model  to get more accuracy is
 **Train accuracy/Train loss**
 ![image](https://user-images.githubusercontent.com/107410157/197338882-ee1b09af-3c49-4c88-a945-29f753e8cb0b.png)
 
-ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละ model ดังตารางที่ 5
+After running 5 times 3 models after fine-tuning results say the models can predict the brand of mobile phone. However, the accuracy is different in each model as show in the table below
 
 **Table 5: Result after fine-tuning**
 | Model | AVG. Test Accuracy | SD Test Accuracy | AVG. Test Loss | SD Test Loss | AVG. Runtime with GPU (H:M:S) |
@@ -94,7 +94,7 @@ the parameter that we adjust from the pre-trained model  to get more accuracy is
 
 
 
-ผลของการทายของแต่ละโมลเดล โดยชื่อของ class คือ Actual brand - Predict Brand
+The result of models (Actual brand - Predict Brand)
 ![image](https://user-images.githubusercontent.com/107410157/197340370-b178c8a0-4478-4d77-a95f-2cfe677bb599.png)
 ![image](https://user-images.githubusercontent.com/107410157/197340236-3596088e-27cb-46c3-9c76-139dc42eed42.png)
 ![image](https://user-images.githubusercontent.com/107410157/197340204-583dced2-bc65-476a-a6da-c19d97be76ac.png)
@@ -102,7 +102,7 @@ the parameter that we adjust from the pre-trained model  to get more accuracy is
 
 
 ## Results:
-จาก model ที่เราเลือกมา 3 model พบว่า **`"MobileNet"`** ให้ค่า accuracy ที่ดีที่สุด โดยผลจากการรันแบบ random seed 5 รอบ Test accuracy เฉลี่ยเท่ากับ 87.00% +/-3.13% และ Test loss เฉลี่ยเท่ากับ 63.13% +/-12.81% เวลาที่ใช้ในการ train model บน GPU เฉลี่ยเท่ากับ 7 min 14 sec ซึ่งหากพิจารณาในด้านเวลา **`"MobileNet"`** จะใช้เวลาในการ train มากที่สุด เนื่องด้วยการกำหนดค่า epoc ที่สูงกว่า อีก 2 model และ ข้อจำกัดของการรันบน Colab
+All of the models that we choose  **`"MobileNet"`** have the most accuracy score result after using random seed 5 times average test accuracy is 87.00% +/-3.13% and the average test loss is 63.13% +/-12.81% the average runtime with GPU is 7 min 14 sec but if ranking model performance from runtime **`"MobileNet"`** is the slowest because it uses the most epoc and limitation of Google Colab
 
 ![image](https://user-images.githubusercontent.com/107410157/197309429-bc6da6a4-b423-4b94-83ab-ac2f2abe1b16.png)
 
