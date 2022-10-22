@@ -122,12 +122,20 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ## Conclusion:
 x
+
 x
+
 x
+
+
 x
+
 x
+
 x
+
 x
+
 x
 
 
@@ -135,12 +143,20 @@ x
 ## References:
 * https://keras.io/api/applications/
 x
+
 x
+
 x
+
+
 x
+
 x
+
 x
+
 x
+
 x
 
 ## 🙋 Deepsleep's Member:
