@@ -52,6 +52,8 @@ From testing all the pre-trained model (**`"VGG16"`**, **`"ResNet152V2"`** , **`
 |**`"MobileNet"`**| 0 | 13.3670 | 0:02:41 | Tesla T4
 |**`"ResNet152V2"`**| 0 | 2508.23 | 0:03:10 | Tesla T4
 
+![MicrosoftTeams-image (2)](https://user-images.githubusercontent.com/86920208/197349159-4e116fc5-017e-49b3-98ac-6dca7eda4dfb.png)
+
 Result of pre-trained model.
 ![image](https://user-images.githubusercontent.com/107410157/197340501-6658c397-1659-48f6-bbd2-8c6a4364263e.png)
 
