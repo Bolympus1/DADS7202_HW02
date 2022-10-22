@@ -109,7 +109,8 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ## Discussion:
 1.การ train image data ต้องใช้ resource ในการรันอย่างมาก ซึ่งทางกลุ่มพบปัญหาว่าไม่สามารถรันบน local pc ได้เลย เนื่องจาก session crash due to ran out of RAM
-![image](https://user-images.githubusercontent.com/107410157/197311237-6927f370-1a64-472c-be9e-5f31b3a0aa37.png)
+![error](https://user-images.githubusercontent.com/107410157/197311373-fb515c9b-7907-4355-b371-3b82b906853b.jpg)
+
 
 2.การ split data มีผลต่อความหลากหลายของรูปภาพใน train/test set หากเรานำภาพที่คล้ายๆกันไปกองอยู่ใน train set หรือ test set อาจทำให้เกิดการ bias ต่อผล accuracy ที่ได้ หากนำ model นี้ไปใช้งานกับ test set ชุดอื่นๆที่ได้จากการเก็บ data ครั้งถัดไป อาจพบว่า โมเดลจะทายไม่ถูกมากขึ้น
 
