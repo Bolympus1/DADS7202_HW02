@@ -65,7 +65,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 ## After Fine-tuning:
 
-เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดีด้วยการปรับพารามิเตอร์ ดังนี้
+เราได้ทำการปรับจูนพารามิเตอร์ เพิ่มเติมจาก pre-trained model จนได้ค่า accuracy ที่ดีขึ้น ด้วยการปรับพารามิเตอร์ต่างๆ ดังนี้
 
 **Table 4: Fine-tuning parameters**
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
@@ -74,7 +74,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 |**`"MobileNet"`**|100|'all trainable|activation="relu" & Dropout =0.5|Adam|0.0001|
 |**`"ResNet152V2"`**|30|'all trainable|activation="relu" & Dropout =0.2|Adam|0.0001|
 
-ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละโมลดังนี้
+ผลของการรัน 5 รอบของทั้ง 3 โมเดลหลังจากการ Fine-tuning พบว่าที่ 3 โมเดลสามารถทายชื่อแบรนด์ของโทรศัพท์ได้ ซึ่งมีค่าความถูกต้องต่างกันไปในแต่ละ model ดังตารางที่ 5
 
 **Table 5: Result after fine-tuning**
 | Model | AVG. Test Accuracy | SD Test Accuracy | AVG. Test Loss | SD Test Loss | AVG. Runtime with GPU (H:M:S) |
