@@ -5,7 +5,7 @@
 
 Nowadays there are a lot of mobile phones in the market. There has a lot of unique functions for their brand. However the appearance of mobile phone are very the same, making the customer very confused when they try to find a phone that they want. "which one is the right one that I want?" or "Is this the phone that I'm looking for?" there is the most question when customer try to find the phone because when searching mobile phone on Google, sometimes the picture that comes up looks like the brand that search but it isn't. Because of this problem, our team comes up with the idea of "Classification of mobile phone brand" to classify the picture of mobile phones which one is which brand. From our discussion, we choose 4 mobile phone brands that we think it's easy to confuse and hard to tell which brand is the right one.
 
-There are a lot of mobile phones in the market but **the appearance of every mobile phone are look the same** makes it hard for the customer to find the phone that they want. Even the photo of the phone on Google sometimes the picture that comes up looks like the brand that searched but it isn't. **Because of this problem our team come up with the idea** **`" Classification of mobile phone brand"`** to classify the picture of mobile phones which one is which brand
+There are a lot of mobile phones in the market but **the appearance of every mobile phone are look the same** makes it hard for the customer to find the phone that they want. Even the photo of the phone on Google sometimes the picture that comes up looks like the brand that searched but it isn't. **Because of this problem our team come up with the idea** **`" Classification of mobile phone brand"`** to classify the picture of mobile phones which one is which brand.
 
 * 📱 **`Apple (iPhone)`**    
 * 📱 **`Huawei`**
@@ -21,18 +21,17 @@ We collected 4 brands of mobile phone datasets which are Apple(iPhone), Huawei, 
 
 
 ## Assumption:
-In this project, we think the pre-trained model that validation on ImageNet dataset can't classify present moblie phone design to tell which image is which brand cause of that we choose 3 models such as VGG16, ResNet152V2, and MobileNet.
+We think the pre-trained model that validation on ImageNet dataset can't classify present moblie phone design to tell which image is which brand cause of that we choose 3 models such as VGG16, ResNet152V2, and MobileNet for study in this project.
 
-In this case our assumption about the pre-trained model is the largest model will have the most accuracy which is VGG16
-and the lowest accuracy is MobileNet
+In this case our assumption about the pre-trained model is the largest model will have the best accuracy which is VGG16
+and the lowest accuracy is MobileNet.
 
 ## Data pre-processing and splitting :
-* Image Preparation : collected all images in .jpg and manually put in into the brand's folder then in a sub-folder split into 2 folders "train_ds" and "test_ds "of each brand.
+* Image Preparation : collected all images in .jpg and manually put them into the brand's folder then in a sub-folder split into 2 folders "train_ds" and "test_ds "of each brand.
 
 * label class : Apple = 0, Huawei = 1, Oppo = 2, and Samsung = 3
 
-* Resizing
-Resizing image dataset to (224, 224, 3)
+* Resizing image dataset to (224, 224, 3)
 
 ![image](https://user-images.githubusercontent.com/107410157/197308226-29a91b68-5a4d-467e-9e3f-402624fc36fa.png)
 
@@ -51,12 +50,12 @@ From testing all the pre-trained model (**`"VGG16"`**, **`"ResNet152V2"`** , **`
 |**`"MobileNet"`**| 0 | 13.3670 | 0:02:41 | Tesla T4
 |**`"ResNet152V2"`**| 0 | 2508.23 | 0:03:10 | Tesla T4
 
-ผลการทายของแต่ละโมเดล 
+Result of pre-trained model.
 ![image](https://user-images.githubusercontent.com/107410157/197340501-6658c397-1659-48f6-bbd2-8c6a4364263e.png)
 
 
 ## Data Augmentation :
-เราได้มีการทำ Data augmentation เพื่อให้ ......... โดยแต่ละ model เลือกใช้วิธีการทำ augmentation แตกต่างกันไป ดังตารางที่ 3
+We decided to do data augmentation to minimize overfit and each model use different data augmentation combination to perform the best result of each model as shown in table3 below.
 
 **Table 3: Data Augmentation**
 | Model         | Image data augmentation                     |
@@ -71,7 +70,7 @@ From testing all the pre-trained model (**`"VGG16"`**, **`"ResNet152V2"`** , **`
 
 ## After Fine-tuning:
 
-the parameter that we adjust from the pre-trained model  to get more accuracy is
+To get more accuracy, the parameter that we adjust from the pre-trained model.
 
 **Table 4: Fine-tuning parameters**
 | Model | epoc | Feature extractor | Feature classifier | Optimizer | learning rate |
@@ -83,7 +82,7 @@ the parameter that we adjust from the pre-trained model  to get more accuracy is
 **Train accuracy/Train loss**
 ![image](https://user-images.githubusercontent.com/107410157/197338882-ee1b09af-3c49-4c88-a945-29f753e8cb0b.png)
 
-After running 5 times 3 models after fine-tuning results say the models can predict the brand of mobile phone. However, the accuracy is different in each model as show in the table below
+After running 5 times, 3 models after fine-tuning results say the models can predict the brand of mobile phone. However, the accuracy is different in each model as show in the table below.
 
 **Table 5: Result after fine-tuning**
 | Model | AVG. Test Accuracy | SD Test Accuracy | AVG. Test Loss | SD Test Loss | AVG. Runtime with GPU (H:M:S) |
@@ -102,7 +101,7 @@ The result of models (Actual brand - Predict Brand)
 
 
 ## Results:
-All of the models that we choose  **`"MobileNet"`** have the most accuracy score result after using random seed 5 times average test accuracy is 87.00% +/-3.13% and the average test loss is 63.13% +/-12.81% the average runtime with GPU is 7 min 14 sec but if ranking model performance from runtime **`"MobileNet"`** is the slowest because it uses the most epoc and limitation of Google Colab
+All of the models that we choose,  **`"MobileNet"`** have the best accuracy score. Result after using random seed 5 times average test accuracy is 87.00% +/-3.13% and the average test loss is 63.13% +/-12.81%, the average runtime with GPU is 7 min 14 sec but if ranking model performance by runtime **`"MobileNet"`** is the slowest because it uses the most epoc and limitation of Google Colab.
 
 ![image](https://user-images.githubusercontent.com/107410157/197309429-bc6da6a4-b423-4b94-83ab-ac2f2abe1b16.png)
 
