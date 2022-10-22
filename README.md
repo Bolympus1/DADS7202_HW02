@@ -103,7 +103,7 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 
 ## Results:
-จาก model ที่เราเลือกมา 3 model พบว่า **`"MobileNet"`** ให้ค่า accuracy ที่ดีที่สุด โดยเฉลี่ยผลจากการรัน 5 รอบ Test accuracy เฉลี่ยเท่ากับ 87.00% +/-3.13% และ Test loss เฉลี่ยเท่ากับ 63.13% +/-12.81% เวลาที่ใช้รันบน GPU เฉลี่ยเท่ากับ 7 min 14 sec.
+จาก model ที่เราเลือกมา 3 model พบว่า **`"MobileNet"`** ให้ค่า accuracy ที่ดีที่สุด โดยเฉลี่ยผลจากการรัน 5 รอบ Test accuracy เฉลี่ยเท่ากับ 87.00% +/-3.13% และ Test loss เฉลี่ยเท่ากับ 63.13% +/-12.81% เวลาที่ใช้ในการ train model บน GPU เฉลี่ยเท่ากับ 7 min 14 sec ซึ่งหากพิจารณาในด้านเวลา **`"MobileNet"`** จะใช้เวลาในการ train มากที่สุด เนื่องด้วยการกำหนดค่า epoc ที่สูงกว่า อีก 2 model และ ข้อจำกัดของการรันบน Colab
 
 ![image](https://user-images.githubusercontent.com/107410157/197309429-bc6da6a4-b423-4b94-83ab-ac2f2abe1b16.png)
 
@@ -111,17 +111,21 @@ Link to download the dataset: https://drive.google.com/drive/folders/16B2ut6co3q
 
 
 ## Discussion:
+
+จากการศึกษาในครั้งนี้ กลุ่มเราได้สรุ
 1.การ train image data ต้องใช้ resource ในการรันอย่างมาก ซึ่งทางกลุ่มพบปัญหาว่าไม่สามารถรันบน local pc ได้เลย เนื่องจาก session crash due to ran out of RAM
 
 ![MicrosoftTeams-image (11)](https://user-images.githubusercontent.com/107410157/197311406-017fbef7-854f-415a-a92b-a6b41c0b95ce.png)
 
+2.
+![image](https://user-images.githubusercontent.com/107410157/197336893-d07eac32-9951-479d-b7b2-ab225d9747d5.png)
 
 
-2.การ split data มีผลต่อความหลากหลายของรูปภาพใน train/test set หากเรานำภาพที่คล้ายๆกันไปกองอยู่ใน train set หรือ test set อาจทำให้เกิดการ bias ต่อผล accuracy ที่ได้ หากนำ model นี้ไปใช้งานกับ test set ชุดอื่นๆที่ได้จากการเก็บ data ครั้งถัดไป อาจพบว่า โมเดลจะทายไม่ถูกมากขึ้น
+3.การ split data มีผลต่อความหลากหลายของรูปภาพใน train/test set หากเรานำภาพที่คล้ายๆกันไปกองอยู่ใน train set หรือ test set อาจทำให้เกิดการ bias ต่อผล accuracy ที่ได้ หากนำ model นี้ไปใช้งานกับ test set ชุดอื่นๆที่ได้จากการเก็บ data ครั้งถัดไป อาจพบว่า โมเดลจะทายไม่ถูกมากขึ้น
 
 
 ## Conclusion:
-x
+* ซึ่งผลการศึกษาในครั้งนี้ ไม่ตรงกับสมมติฐานที่ได้ตั้งไว้ในเบื้องต้น ที่คาดว่า VGG16 ที่มีขนาดของ model gxHo 
 
 x
 
